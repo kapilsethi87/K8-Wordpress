@@ -2,6 +2,8 @@
 
 <img src="Images/K8_logo.png" width="100">
 
+---
+
 Kubernetes is an open source platform for managing container technologies such as Docker.
 
 Docker lets you create containers for a pre-configured image and application. Kubernetes provides the next step,
