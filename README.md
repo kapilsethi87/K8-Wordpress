@@ -1,6 +1,6 @@
 # Kubernetes 
 
-<img src="Images/K8_logo.png" width="600" hight="100">
+<img src="Images/K8_logo.png" width="150" hight="50">
 
 Kubernetes is an open source platform for managing container technologies such as Docker.
 
