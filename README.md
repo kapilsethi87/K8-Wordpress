@@ -1,5 +1,8 @@
 # Kubernetes 
-<img src="Images/K8_logo.png" width="100px"/> <img src="Images/WordPress.png" width="230px"/> 
+
+<img align="left" src="Images/K8_logo.png" alt="Made with Kubernetes" title="Kubernetes" width="100px"/> 
+<img align="left" src="Images/WordPress.png" alt="Made with WordPress" title="WordPress" width="230px"/>
+<br/><br/><br/><br/><br/>
 
 ---
 
