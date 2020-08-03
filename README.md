@@ -1,5 +1,5 @@
 # Kubernetes 
-
+<p align="center">
 <img src="Images/K8_logo.png" width="100">
 
 ---
