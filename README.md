@@ -1,6 +1,5 @@
 # Kubernetes 
-<p align="center">
-<img src="Images/K8_logo.png" width="100">
+<img src="Images/K8_logo.png" width="100px"/> <img src="Images/WordPress.png" width="230px"/> 
 
 ---
 
@@ -11,7 +10,7 @@ allowing you to balance loads between containers and run multiple containers acr
 
 ## Installation on Ubuntu
 
-## Kubernetes Master Setup
+## Kubernetes Master Setup  :technologist:
 
 Install Required Setups
 
