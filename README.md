@@ -138,5 +138,84 @@ kubectl get pods --all-namespaces
 kubectl get -o wide pods --all-namespaces 
 ```
 
-
 [LinuxDevOps.in](http://linuxdevops.in)
+
+---
+
+# Kubernetes Worker Node Setup
+
+
+#### Start by disabling the swap memory
+```bash
+sudo swapoff -a
+sed -i 's/^\(.*swap.*\)$/#\1/' /etc/fstab
+```
+#### Set Hostname
+```bash
+sudo hostnamectl set-hostname worker01
+```
+
+#### Update the package list with the command:
+```bash
+sudo apt-get update
+```
+
+#### Next, install Docker with the command:
+```bash
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+```
+
+#### Add Docker’s official GPG key:
+```bash
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+
+Add Docker Repo
+```bash
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+```
+
+#### Install the latest version of Docker Engine and containerd
+```bash
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+```
+
+#### Check the installation (and version) by entering the following:
+```bash
+docker version
+```
+
+#### Install Kubernetes
+```bash
+sudo apt-get update && sudo apt-get install -y apt-transport-https curl
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+```
+```bash
+cat <<EOF | sudo tee /etc/apt/sources.list.d/kubernetes.list
+deb https://apt.kubernetes.io/ kubernetes-xenial main
+EOF
+```
+```bash
+sudo apt-get update
+sudo apt-get install -y kubelet kubeadm kubectl
+sudo apt-mark hold kubelet kubeadm kubectl
+```
+
+#### Join Worker Node to Cluster
+```bash
+```
+
+#### Nfs Client package need to install on all worker node for Nfs mount volumes
+```bash
+sudo apt install nfs-common
+```
+
+## Setup
